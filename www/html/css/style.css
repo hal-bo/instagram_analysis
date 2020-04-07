@@ -1,0 +1,19 @@
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gallery-item{
+    flex: 1 1 33.333%;
+    -ms-flex: 1 1 33.333%;
+}
+.media:hover{
+    opacity: 0.5;
+}
