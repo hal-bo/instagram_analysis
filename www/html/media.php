@@ -60,6 +60,11 @@
         //echo $photos;
     ?>
     </ul>
+    <?php
+        $reach_val = $instagram_data->data[1]->values[0]->value;
+        $engage_val = $instagram_data->data[2]->values[0]->value;
+        echo '<br><strong>engage/reach<br>' . round($engage_val / $reach_val * 100,2) . '%</strong>';
+    ?>
     <?php foreach($instagram_data->data as $data): ?>
         <table width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <?php foreach($data as $key => $value): ?>
