@@ -42,7 +42,9 @@
         for($i = 0; $i < $photo_length ;$i++){
             $src = $gallery_data[$i]->media_url;
             $id = $gallery_data[$i]->id;
-            $photos .= '<li class="gallery-item"><a href="media.php?id='.$id.'&src='.$src.'"><img class="media" src=' . $src . '></a></li>';
+            $like = $gallery_data[$i]->like_count;
+            $comment = $gallery_data[$i]->comments_count;
+            $photos .= '<li class="gallery-item"><a href="media.php?id='.$id.'&src='.$src.'"><img class="media" src=' . $src . '><br>↑like: '.$like.'<br>　comment: '.$comment.'</a></li>';
         }
 
         echo $photos;
